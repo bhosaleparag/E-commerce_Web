@@ -1,0 +1,222 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #181c2c;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+#root {
+  width: 100vw;
+  height: 100vh;
+}
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+h1{
+  text-align: center;
+}
+.products {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-items: center;
+  gap: 15px;
+}
+.product-card {
+  border-radius: 4px;
+  background-color: #212436;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row;
+  margin: 16px;
+  overflow: hidden;
+  max-width: 474px;
+  perspective: 1000px;
+}
+
+.product-image {
+  height: 230px;
+  object-fit: cover;
+  width: 200px;
+}
+
+.product-info, .product-description {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+  transition: all .3s ease-in-out;
+}
+
+.product-title {
+  font-size: 20px;
+  margin: 0;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.product-category {
+  font-size: 14px;
+  color: #525974;
+  margin-bottom: 8px;
+}
+
+.product-price {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.product-rating {
+  font-size: 14px;
+  margin-top: 0;
+  color: #525974;
+  display: flex;
+  align-items: center;
+}
+
+.product-reviews {
+  margin-left: 8px;
+}
+.product-btn-desc {
+  width: 129px;
+  background-color: #6d73ff;
+  font-size: 0.9rem;
+  height: 40px;
+  border: 0px;
+  border-radius: 7px;
+}
+.product-btns {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  justify-content: space-between;
+}
+.product-description {
+  justify-content: normal
+}
+.product-description-data::-webkit-scrollbar {
+  display: none;
+}
+.product-description-data {
+  border: 2px solid #6d73ff;
+  border-radius: 10px;
+  height: 140px;
+  margin: 10px 0px 0px 0px;
+  padding: 5px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+.product-description-title {
+  font-size: 1.5rem;
+  margin: 0;
+}
+.emoji{
+  font-size: 30px;
+  cursor: pointer;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  justify-content: center;
+}
+
+.input {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 2px solid #535bf2;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.login-btn {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+input[type="text"], input[type="password"]  ,select{
+  width: 100px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    border: 0px;
+    color: #f1f1f1;
+    box-shadow: 2px 3px 4px 2px #171a26;
+    border-radius: 24px;
+}
+input[type="text"], input[type="password"] {
+  width: 230px;
+}
+nav {
+  background-color: #171a26;
+  display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  gap: 10px;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding-right: 3vw;
+  align-items: center;
+}
+.checkout{
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  align-items: center;
+  gap: 10%;
+}
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+.popup-content p {
+  margin-bottom: 10px;
+}
+
+.popup-content button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.popup-content button:hover {
+  background-color: #0069d9;
+}
